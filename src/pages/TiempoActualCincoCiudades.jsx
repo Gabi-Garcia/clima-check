@@ -6,7 +6,7 @@ import'../styles/tiempoCiudades.css'
 
 export const TiempoActualCincoCiudades = () => {
   // Arreglo de ciudades
-  const ciudades = ['Buenos Aires', 'Nueva York', 'Londres', 'Tokio', 'Sidney', 'Barcelona', 'Santiago de Chile','Lima','Helsinki'];
+  const ciudades = ['Buenos Aires', 'Nueva York', 'Londres', 'Tokio', 'Sidney', 'Barcelona', 'Santiago de Chile', 'Lima', 'Helsinki'];
 
   // Estado para almacenar la ciudad seleccionada
   const [ciudadSeleccionada, setCiudadSeleccionada] = useState(ciudades[0]);
@@ -36,11 +36,10 @@ export const TiempoActualCincoCiudades = () => {
     console.log('Ciudad seleccionada: ', event.target.value)
   };
   return (
-    <>
+    <> 
       <div>
-      <h1>Weather App</h1>
+      <h1>WeatherVibes</h1>
         <h2>Elije una Ciudad para ver su Clima Actual</h2>
-        {/* <label className='label'>Elije una Ciudad: </label> */}
         <select className='select' value={ciudadSeleccionada} onChange={handleChangeCiudad}>
           {/* Mapear sobre el arreglo de ciudades para generar las opciones del select */}
           {ciudades.map((ciudad) => (
@@ -51,16 +50,25 @@ export const TiempoActualCincoCiudades = () => {
         </select>
         {weatherData && (
         <div className='tiempoCiudades'>
-           <p>Ciudad seleccionada: {ciudadSeleccionada}</p>
-          <p>Temperatura: {Math.round(weatherData.list[0].main.temp)}°C</p>
-          <p>Clima: {weatherData.list[0].weather[0].main}</p>
-          <p>País: {weatherData.city.country}</p>
-          <p>Ciudad: {weatherData.city.name}</p>
-          <img
-            src={`http://openweathermap.org/img/w/${weatherData.list[0].weather[0].icon}.png`}
-            alt={weatherData.city.name}
-            onError={(e) => console.error("Error al cargar la imagen:", e)}
-          />
+            <div className='appImage'>
+                <img src="/Black Couple Outdoors 1.png" alt="appImage" />
+            </div>
+            <div className='cajaInferior'>
+                <p>{ciudadSeleccionada}</p>
+                <p>{Math.round(weatherData.list[0].main.temp)}°C</p>
+                <div className='imgBox'>
+                    <img
+                      src={`http://openweathermap.org/img/w/${weatherData.list[0].weather[0].icon}.png`}
+                      alt={weatherData.city.name}
+                      onError={(e) => console.error("Error al cargar la imagen:", e)}
+                    />   
+                </div>
+            </div>
+            <div className='cajaTextoLateral'>
+              <p>Clima: {weatherData.list[0].weather[0].main}</p>
+              <p>País: {weatherData.city.country}</p>
+              <p>Ciudad: {weatherData.city.name}</p>
+            </div>
         </div>
         )}
       </div>

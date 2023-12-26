@@ -43,26 +43,29 @@ const TiempoCincoDiasEnMiUbicacion = () => {
    
   return (
     <div>
-      <h1>Weather App</h1>
-      {weatherData && weatherData.list && (
-        <div className='cincoDiasCaja'>
-          <h2>Clima por cinco días en {weatherData.city.name}</h2>
-          {weatherData.list.slice(0, 5).map((forecast, index) => (
-            <div key={index} className='cincoDías'>
+        <h1>WeatherVibes</h1>
+        <img src="/public/Black Couple Outdoors 1.png" alt="appImage" />
+        {weatherData && weatherData.list && (
+          <div className='cincoDiasCaja'>
+          <h2>Previsión cinco días en {weatherData.city.name}</h2>
+            {weatherData.list.slice(0, 5).map((forecast, index) => (
+              <div key={index} className='cincoDias'>
+                <div className='cajaLateral'>
               <p>Día {index + 1}</p>
               <p>Temperatura: {Math.round(forecast.main.temp)}°C</p>
-              <p>Clima: {forecast.weather[0].main}</p>
-              <p>País: {weatherData.city.country}</p>
-              <p>Ciudad: {weatherData.city.name}</p>
-              <img
-                src={`http://openweathermap.org/img/w/${forecast.weather[0].icon}.png`}
-                alt={forecast.weather[0].description}
-                onError={(e) => console.error("Error al cargar la imagen:", e)}
-              />
-            </div>
-          ))}
-        </div>
-      )}
+                <p>Clima: {forecast.weather[0].main}</p>
+                <p>País: {weatherData.city.country}</p>
+                <p>Ciudad: {weatherData.city.name}</p>
+                <img
+                  src={`http://openweathermap.org/img/w/${forecast.weather[0].icon}.png`}
+                  alt={forecast.weather[0].description}
+                  onError={(e) => console.error("Error al cargar la imagen:", e)}
+                />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
     </div>
   );
 };

@@ -41,21 +41,33 @@ const TiempoActualEnMiUbicacion = () => {
   }, []);
 
   return (
-    <div> 
+  <> 
       <GeoLocationComponent />
-      <h1>Weather App</h1>
+      <h1>WeatherVibes</h1>
       {weatherData && (
-        <div className='tiempoActual'>
-          <h2>Clima actual en {weatherData.name}</h2>
-          <p>Temperatura: {Math.round(weatherData.main.temp)}°C</p>
-          <p>Clima: {weatherData.weather[0].main}</p>
-          <p>País: {weatherData.sys.country}</p>
-          <p>Ciudad: {weatherData.name}</p>
-          <img src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`} alt={weatherData.name} onError={(e) => console.error("Error al cargar la imagen:", e)}/>
-          {/* Otros detalles del clima pueden ser mostrados aquí */}
-        </div>
+        <>
+            <h2>Clima actual en {weatherData.name}</h2>    
+          <div className='tiempoActual'>
+            <div className='appImage'>
+              <img src="/Black Couple Outdoors 1.png" alt="appImage" />
+            </div>
+            <div className='cajaInferior'>
+                <p>{Math.round(weatherData.main.temp)}°C</p>
+                <p>{weatherData.name}</p>
+                  <div className='imgBox'>
+                    <img src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`} alt={weatherData.name} onError={(e) => console.error("Error al cargar la imagen:", e)} />
+                  </div>
+            </div>
+              <div className='cajaTextoLateral'>
+                    <p>Temperatura: {Math.round(weatherData.main.temp)}°C</p>
+                    <p>Clima: {weatherData.weather[0].main}</p>
+                    <p>País: {weatherData.sys.country}</p>
+                    <p>Ciudad: {weatherData.name}</p>
+              </div>
+          </div>
+        </>
       )}
-    </div>
+  </>
   );
 };
 

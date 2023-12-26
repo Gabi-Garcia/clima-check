@@ -36,7 +36,8 @@ export const PrevisiondDelTiempoCincoDíasEnCiudadSeleccionada = () => {
   return (
  <>
     <div>
-      <h1>Weather App</h1>
+    <h1>WeatherVibes</h1>
+      <img src="/public/Black Couple Outdoors 1.png" alt="appImage" />
           <h2>Selecciona una ciudad para ver su clima los próximos cinco días</h2>
         <select className='select' value={ciudadSeleccionada} onChange={handleChangeCiudad}>
           {/* Mapear sobre el arreglo de ciudades para generar las opciones del select */}
@@ -50,6 +51,7 @@ export const PrevisiondDelTiempoCincoDíasEnCiudadSeleccionada = () => {
         <div>
           {weatherData.list.slice(0, 5).map((forecast, index) => (
             <div key={index} className='cincoDiasCiudades'>
+               <div className='cajaLateral'>
               <p>Día {index + 1}</p>
               <p>Temperatura: {Math.round(forecast.main.temp)}°C</p>
               <p>Clima: {forecast.weather[0].main}</p>
@@ -60,6 +62,7 @@ export const PrevisiondDelTiempoCincoDíasEnCiudadSeleccionada = () => {
                 alt={forecast.weather[0].description}
                 onError={(e) => console.error("Error al cargar la imagen:", e)}
               />
+               </div>
             </div>
           ))}
         </div>

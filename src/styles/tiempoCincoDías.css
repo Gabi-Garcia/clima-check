@@ -1,26 +1,52 @@
 
-.cincoDías{
+.cincoDias{
     width: 40%;
+    height:100%;
+    gap: 5px;
+    padding: 15px;
     margin: auto;
-    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     font-size: 1.1rem;
-    gap:0px;
     background-color: rgb(136, 132, 132);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.30);
+    backdrop-filter: blur(10px);
+    margin-top: 10px;  
     /* border: 1px solid blue; */
 }
-.cincoDías p{
+.cincoDias .cajaLateral{
+width: 70%;
+height: 80%;
+padding: 10px;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: auto;
+margin-top: 0px;
+border-radius: 5px;
+background: rgba(0, 0, 0, 0.50);
+backdrop-filter: blur(10px);
+/* border: 1px solid red; */
+    
+}
+.cincoDias p{
     font-size: 1.2rem;
     width: 50%;
     margin: auto;
-    gap: 0;
-    padding: 10px;
+    margin-top: 10px;
+    gap: 10px;
+    padding: 10px;  
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(10px);
     /* border: 1px solid yellow; */
 }
-.cincoDías img{
-    width: 50px;
-    height: 50px;
-    margin: auto;
+.cincoDias img{
+    width: 100px;
+    height: 100px;
+    margin: auto; 
 }
