@@ -33,7 +33,7 @@ a:hover {
 } */
 
 body {
-  background-image:linear-gradient( rgba(211, 211, 211, 0), rgba(211, 211, 211, 0) ),url('./backgroundImage.png');
+  background-image:linear-gradient( rgba(211, 211, 211, 0), rgba(211, 211, 211, 0) ),url('/backgroundImage.png');
   background-repeat: no-repeat;
   background-size: cover;
  /* background-color: lightgray 50% ;*/
