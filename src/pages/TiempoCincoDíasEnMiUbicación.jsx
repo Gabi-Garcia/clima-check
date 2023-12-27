@@ -43,7 +43,7 @@ const TiempoCincoDiasEnMiUbicacion = () => {
    
   return (
     <div>
-        <h1>WeatherVibes</h1>
+       <h1>Clima Check</h1>
         <img src="/Black Couple Outdoors 1.png" alt="appImage" />
         {weatherData && weatherData.list && (
           <div className='cincoDiasCaja'>

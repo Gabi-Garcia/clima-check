@@ -37,9 +37,9 @@
   margin: auto;
   margin-top:0px;
   padding: 10px;
-  /* border: 1px solid rgb(9, 255, 0); */
+  border: 1px solid rgb(9, 255, 0);
 }
-a {
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
@@ -51,8 +51,8 @@ a {
   gap:0px;
   width: 20%;
   font-size: 1rem;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 a:hover {
   color: #535bf2;
-}
+} */

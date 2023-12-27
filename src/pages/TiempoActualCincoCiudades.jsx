@@ -1,5 +1,7 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable no-unreachable */
 /* eslint-disable no-unused-vars */
+import { NavLink, Outlet } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import'../styles/tiempoCiudades.css'
 
@@ -38,7 +40,7 @@ export const TiempoActualCincoCiudades = () => {
   return (
     <> 
       <div>
-      <h1>WeatherVibes</h1>
+      <h1>Clima Check</h1>
         <h2>Elije una Ciudad para ver su Clima Actual</h2>
         <select className='select' value={ciudadSeleccionada} onChange={handleChangeCiudad}>
           {/* Mapear sobre el arreglo de ciudades para generar las opciones del select */}
@@ -48,7 +50,7 @@ export const TiempoActualCincoCiudades = () => {
             </option>
           ))}
         </select>
-        {weatherData && (
+        {weatherData && ( 
         <div className='tiempoCiudades'>
             <div className='appImage'>
                 <img src="/Black Couple Outdoors 1.png" alt="appImage" />
@@ -63,6 +65,7 @@ export const TiempoActualCincoCiudades = () => {
                       onError={(e) => console.error("Error al cargar la imagen:", e)}
                     />   
                 </div>
+            <NavLink className="navLink" to="/PrevisiondDelTiempoCincoDíasEnCiudadSeleccionada">Clima Cinco Días En Ciudades</NavLink>
             </div>
             <div className='cajaTextoLateral'>
               <p>Clima: {weatherData.list[0].weather[0].main}</p>

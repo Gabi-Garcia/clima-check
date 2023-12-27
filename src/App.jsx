@@ -5,6 +5,7 @@
 import './App.css'
 import { NavLink, Outlet } from 'react-router-dom'
 import React, { useState, useEffect } from 'react';
+import Footer from './components/Footer';
 // eslint-disable-next-line no-unused-vars
 
 
@@ -27,6 +28,7 @@ function App() {
           <main>
             <Outlet></Outlet>
           </main>
+          <Footer />
     </div>
     </>
   )

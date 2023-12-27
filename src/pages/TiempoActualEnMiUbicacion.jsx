@@ -1,5 +1,7 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
+import { NavLink, Outlet } from 'react-router-dom'
 import GeoLocationComponent from '../components/GeoLocationComponent';
 import '../styles/tiempoActual.css'
 
@@ -43,7 +45,7 @@ const TiempoActualEnMiUbicacion = () => {
   return (
   <> 
       <GeoLocationComponent />
-      <h1>WeatherVibes</h1>
+      <h1>Clima Check</h1>
       {weatherData && (
         <>
             <h2>Clima actual en {weatherData.name}</h2>    
@@ -58,6 +60,7 @@ const TiempoActualEnMiUbicacion = () => {
                     <img src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`} alt={weatherData.name} onError={(e) => console.error("Error al cargar la imagen:", e)} />
                   </div>
             </div>
+            <NavLink  className="navLink" to="TiempoCincoDíasEnMiUbicación ">Clima Cinco Días En Mi Ubicación </NavLink>
               <div className='cajaTextoLateral'>
                     <p>Temperatura: {Math.round(weatherData.main.temp)}°C</p>
                     <p>Clima: {weatherData.weather[0].main}</p>
