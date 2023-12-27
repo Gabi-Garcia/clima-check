@@ -32,16 +32,21 @@
 }
 .nav nav .navLink{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
   flex-direction: row;
   margin: auto;
-  margin-top:0px;
+  margin-top:10px;
   padding: 10px;
-  border: 1px solid rgb(9, 255, 0);
+  font-size: 1.5rem;
+  text-decoration: inherit;
+  color: rgba(255, 255, 255, 0.87);
+  /* border: 1px solid rgb(9, 255, 0); */
+}
+.nav nav .navLink:hover{
+  color:#242424;
 }
 /* a {
   font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
   padding:0px;
   display: flex;

@@ -65,7 +65,7 @@ export const TiempoActualCincoCiudades = () => {
                       onError={(e) => console.error("Error al cargar la imagen:", e)}
                     />   
                 </div>
-            <NavLink className="navLink" to="/PrevisiondDelTiempoCincoDíasEnCiudadSeleccionada">Clima Cinco Días En Ciudades</NavLink>
+            <NavLink className="navLink" to="/PrevisiondDelTiempoCincoDíasEnCiudadSeleccionada">Previsión cinco días en Ciudades</NavLink>
             </div>
             <div className='cajaTextoLateral'>
               <p>Clima: {weatherData.list[0].weather[0].main}</p>

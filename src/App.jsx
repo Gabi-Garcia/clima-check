@@ -18,10 +18,10 @@ function App() {
           <header>
             <div className='nav'>
               <nav>
-                <NavLink className="navLink" to="">Clima en mi Ubicación</NavLink>
-                <NavLink  className="navLink" to="TiempoCincoDíasEnMiUbicación ">Clima Cinco Días En Mi Ubicación </NavLink>
-                <NavLink  className="navLink" to="TiempoActualCincoCiudades">Clima Actual Ciudades</NavLink>
-                <NavLink className="navLink" to="PrevisiondDelTiempoCincoDíasEnCiudadSeleccionada">Clima Cinco Días En Ciudades</NavLink>
+                <NavLink className="navLink" to="">Clima</NavLink>
+                <NavLink  className="navLink" to="TiempoCincoDíasEnMiUbicación ">Previsión por cinco días</NavLink>
+                <NavLink  className="navLink" to="TiempoActualCincoCiudades">Ciudades</NavLink>
+                <NavLink className="navLink" to="PrevisiondDelTiempoCincoDíasEnCiudadSeleccionada">Previsión cinco días en Ciudades</NavLink>
               </nav>
             </div>
           </header>

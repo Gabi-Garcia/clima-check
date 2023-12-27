@@ -60,7 +60,7 @@ const TiempoActualEnMiUbicacion = () => {
                     <img src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`} alt={weatherData.name} onError={(e) => console.error("Error al cargar la imagen:", e)} />
                   </div>
             </div>
-            <NavLink  className="navLink" to="TiempoCincoDíasEnMiUbicación ">Clima Cinco Días En Mi Ubicación </NavLink>
+            <NavLink  className="navLink" to="TiempoCincoDíasEnMiUbicación ">Previsión por cinco días</NavLink>
               <div className='cajaTextoLateral'>
                     <p>Temperatura: {Math.round(weatherData.main.temp)}°C</p>
                     <p>Clima: {weatherData.weather[0].main}</p>
