@@ -37,7 +37,7 @@ export const PrevisiondDelTiempoCincoDíasEnCiudadSeleccionada = () => {
  <>
     <div>
     <h1>WeatherVibes</h1>
-      <img src="/public/Black Couple Outdoors 1.png" alt="appImage" />
+      <img src="/Black Couple Outdoors 1.png" alt="appImage" />
           <h2>Selecciona una ciudad para ver su clima los próximos cinco días</h2>
         <select className='select' value={ciudadSeleccionada} onChange={handleChangeCiudad}>
           {/* Mapear sobre el arreglo de ciudades para generar las opciones del select */}

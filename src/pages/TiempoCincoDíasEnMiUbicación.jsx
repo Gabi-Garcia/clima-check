@@ -44,7 +44,7 @@ const TiempoCincoDiasEnMiUbicacion = () => {
   return (
     <div>
         <h1>WeatherVibes</h1>
-        <img src="/public/Black Couple Outdoors 1.png" alt="appImage" />
+        <img src="/Black Couple Outdoors 1.png" alt="appImage" />
         {weatherData && weatherData.list && (
           <div className='cincoDiasCaja'>
           <h2>Previsión cinco días en {weatherData.city.name}</h2>
