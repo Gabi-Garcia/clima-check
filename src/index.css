@@ -11,8 +11,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-body {
+  body {
+    display: flex;
+    flex-wrap: wrap;
   background-image:linear-gradient( rgba(73, 68, 68, 0.226), rgba(22, 21, 21, 0.548) ),url('/backgroundImage.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,43 +25,16 @@ body {
 }
 
 h1 {
-  font-size:4rem;
+  /* margin-top: 0px; */
+  font-size:5rem;
   line-height: 1.1;
 }
- /* a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-  padding:0px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap:0px;
-  width: 20%;
-  font-size: 1.1rem;
-  border: 1px solid red;
+/*MOBILE*/
+@media(min-width: 320px) and (max-width: 768px){
+  h1 {
+    /* margin-top: 0px; */
+    font-size:4rem;
+    line-height: 1.1;
+  }
 }
-a:hover {
-  color: #535bf2;
-} */
-
-
-/* button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
+ 

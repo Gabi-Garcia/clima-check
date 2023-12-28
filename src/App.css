@@ -1,30 +1,31 @@
-#root {
-  margin: 0 auto;
-  padding: 0rem;
-  text-align: center;
-}
+/* @media(min-width: 769px) and (max-width: 1500px){ */
+  #root {
+    margin: 0 auto;
+    padding: 0rem;
+    text-align: center;
+  }
 .app{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+padding: 0;
+margin: 0;
 }
 .nav{
+  width:90vw;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 95%;
-  padding:30px;
+  padding:0px;
   margin: auto;
-  margin-top: 0px;
-  /* border: 1px solid blue;*/
+  margin-top: 40px;
+  /* border: 1px solid blue; */
 } 
 .nav nav{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 0px;
   margin:auto;
   text-align: center;
   align-items: center;
@@ -36,28 +37,53 @@
   flex-direction: row;
   margin: auto;
   margin-top:10px;
-  padding: 10px;
-  font-size: 1.5rem;
+  padding: 0px;
+  font-size: 1.3rem;
   text-decoration: inherit;
   color: rgba(255, 255, 255, 0.87);
+  justify-content: space-between;
   /* border: 1px solid rgb(9, 255, 0); */
 }
 .nav nav .navLink:hover{
   color:#242424;
 }
-/* a {
-  font-weight: 500;
-  text-decoration: inherit;
-  padding:0px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap:0px;
-  width: 20%;
-  font-size: 1rem;
-  border: 1px solid red;
+/* } */
+
+/*MOBILE*/
+@media(min-width: 320px) and (max-width: 768px){
+
+  .nav{
+    width:90vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding:0px;
+    margin: auto;
+    margin-top: 20px;
+    /* border: 1px solid blue; */
+  } 
+  .nav nav{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0px;
+    margin:auto;
+    text-align: center;
+    align-items: center;
+    /* border: 1px solid red; */
+  }
+  .nav nav .navLink{
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction:row;
+    margin: auto;
+    margin-top:10px;
+    padding: 0px;
+    font-size: 1rem;
+    text-decoration: inherit;
+    color: rgba(255, 255, 255, 0.87);
+    justify-content: space-between;
+    /* border: 1px solid rgb(9, 255, 0); */
+  }
 }
-a:hover {
-  color: #535bf2;
-} */

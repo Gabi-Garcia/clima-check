@@ -1,23 +1,26 @@
-.tiempoCiudades{
-    width: 55%;
-    height: 70vh;
-    gap: 0px;
-    margin: auto;
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap; 
-    flex-direction: column;
-    font-size: 1.1rem;
-    background-color: rgb(136, 132, 132);
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.30);
-    backdrop-filter: blur(10px);
-    /* border: 1px solid blue; */
-}
+@media(min-width: 769px) and (max-width: 1500px){
+
+    .tiempoCiudades{
+        width: 90%;
+        height: 70vh;
+        gap: 0px;
+        padding: 10px;
+        margin: auto;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap; 
+        flex-direction: column;
+        font-size: 1.1rem;
+        background-color: rgb(136, 132, 132);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.30);
+        backdrop-filter: blur(10px);
+        /* border: 1px solid blue; */
+    }
 .select{
     padding: 15px;
     cursor: pointer;
-    width: 20%;
+    width: 30%;
     font-size: 1.2rem;
     border-radius: 10px;
 }
@@ -46,7 +49,7 @@
     gap:0px;
 }
 .tiempoCiudades .cajaInferior p{
-font-size:2.4rem;
+font-size:1rem;
 display: flex;
 flex-wrap: wrap;
 margin: auto;
@@ -86,4 +89,5 @@ backdrop-filter: blur(10px);
     background: rgba(0, 0, 0, 0.50);
     backdrop-filter: blur(10px);
     /* border: 1px solid yellow; */
+}
 }
