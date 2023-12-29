@@ -96,7 +96,7 @@ backdrop-filter: blur(10px);
 @media(min-width: 320px) and (max-width: 768px){
     .tiempoCiudades{
         width: 80vw;
-        height: 90vh;
+        /* height: 90vh; */
         gap: 0px;
         padding: 10px;
         margin: auto;
@@ -109,7 +109,7 @@ backdrop-filter: blur(10px);
         background: rgba(255, 255, 255, 0.30);
         border-radius: 10px;
         backdrop-filter: blur(10px);
-        /* border: 1px solid blue; */
+        border: 1px solid blue;
     }
     .select{
         padding: 10px;
@@ -141,6 +141,7 @@ backdrop-filter: blur(10px);
         text-align: center;
         gap:0px;
         padding: 0px;
+        margin-top: 0px;
         /* border: 1px solid black; */
     }
     .tiempoCiudades .cajaInferior p{
