@@ -109,7 +109,7 @@ backdrop-filter: blur(10px);
         background: rgba(255, 255, 255, 0.30);
         border-radius: 10px;
         backdrop-filter: blur(10px);
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
     }
     .select{
         padding: 10px;
