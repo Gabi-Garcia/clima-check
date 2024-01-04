@@ -33,7 +33,7 @@ backdrop-filter: blur(10px);
 }
 .cincoDiasCiudades p{
     font-size: 1.2rem;
-    width: 50%;
+    width: 60%;
     margin: auto;
     margin-top: 10px;
     gap: 10px;
@@ -66,6 +66,16 @@ backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
         margin-top: 20px;  
         /* border: 1px solid blue; */
+    }
+    .select{
+        padding: 10px;
+        cursor: pointer;
+        width: 70vw;
+        margin-top: 20px;
+        font-size: 1rem;
+        border-radius: 10px;
+        text-align: center;
+
     }
    .cincoDiasCiudades .cajaLateral{  
     width: 90%;

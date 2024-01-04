@@ -2,9 +2,9 @@
 
     .tiempoCiudades{
         width: 90%;
-        height: 70vh;
+        height: 100vh;
         gap: 0px;
-        padding: 10px;
+        padding: 15px;
         margin: auto;
         margin-top: 20px;
         display: flex;
@@ -20,11 +20,11 @@
 .select{
     padding: 15px;
     cursor: pointer;
-    width: 30%;
+    width: 50vh;
     font-size: 1.2rem;
     border-radius: 10px;
+    text-align: center;
 }
-/*PRUEBA*/
 .tiempoCiudades .appImage{
     width: 280px;
     height:280px;
@@ -38,18 +38,17 @@
 .tiempoCiudades .cajaInferior{
     display: flex;
    flex-wrap: wrap;
-   flex-direction: row;
-   width: 40%;
+   flex-direction: column;
+   width: 30%;
    margin: auto;
-   margin-top: 0px;
-   margin-left: 40px;
     align-items: center;
     justify-content: center;
     text-align: center;
     gap:0px;
+    /* border: 1px solid blue; */
 }
 .tiempoCiudades .cajaInferior p{
-font-size:1rem;
+font-size:1.5rem;
 display: flex;
 flex-wrap: wrap;
 margin: auto;
@@ -66,30 +65,33 @@ margin: auto;
    
 }
 .tiempoCiudades .cajaTextoLateral{
-width: 40%;
-height: 90%;
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-margin-left:70px;
-justify-content: center;
-align-items: center;
-margin-top: 20px;
-border-radius: 5px;
-background: rgba(0, 0, 0, 0.50);
-backdrop-filter: blur(10px);
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left:60px;
+    justify-content: center;
+    /* align-items: center; */
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(10px);
 /* border: 1px solid red; */
 }
 .tiempoCiudades .cajaTextoLateral p{
-    font-size: 1rem; 
-    width: 60%;
-    gap: 5px;
+    margin-left: 7px;
+    font-size: 1rem;
+    width: 45%;
+    gap:0px;
     padding: 5px; 
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.50);
     backdrop-filter: blur(10px);
     /* border: 1px solid yellow; */
 }
+
 }
 
 /*MOBILE*/
@@ -114,10 +116,12 @@ backdrop-filter: blur(10px);
     .select{
         padding: 10px;
         cursor: pointer;
-        width: 60vw;
+        width: 50vw;
         margin-top: 20px;
         font-size: 1rem;
         border-radius: 10px;
+        text-align: center;
+
     }
     .tiempoCiudades .appImage{
         width: 150px;
