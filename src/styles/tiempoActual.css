@@ -5,10 +5,11 @@
         line-height: 1.1;
       }    
 .tiempoActual{ 
-    width: 80%;
-    height: 100vh;
+
+    width: 65%;
+    height: 85vh;
     gap: 0px;
-    padding: 30px;
+    padding: 20px;
     margin: auto;
     display: flex;
     flex-wrap: wrap; 
@@ -21,9 +22,10 @@
     /* border: 1px solid blue; */
 }
 .tiempoActual .appImage{
-    width: 280px;
-    height:280px;
+    width: 250px;
+    height:250px;
     margin: auto;
+    margin-top: 0px;
     /* border: 1px solid violet; */
 }
 .tiempoActual .appImage img{
@@ -34,12 +36,13 @@
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
-   width: 30%;
+   width: 35%;
    margin: auto;
+   margin-top: 0px;
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 5px;
+    gap: 4px;
     /* border: 1px solid black; */
 }
 .tiempoActual .cajaInferior p{
@@ -51,7 +54,7 @@ margin: auto;
 .tiempoActual .cajaInferior .imgBox{
     width: 60px;
     height: 60px;
-    margin-top: 10px;
+    margin-top: 0px;
     
 }
 .tiempoActual .cajaInferior .imgBox img{
@@ -61,7 +64,7 @@ margin: auto;
 }
 .tiempoActual .cajaTextoLateral{
 width: 50%;
-height: 100vh;
+/* height: 100vh; */
 display: flex;
 flex-wrap: wrap;
 flex-direction: row;
@@ -90,8 +93,8 @@ backdrop-filter: blur(10px);
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    font-size: 1.5rem;
     margin-top: 0px;
+    font-size: 1.5rem;
     color: white;
 }
 }
@@ -99,7 +102,7 @@ backdrop-filter: blur(10px);
 @media(min-width: 320px) and (max-width: 768px){
     .tiempoActual{
         width: 80vw;
-        /* height: 80vh; */
+        /* height: 100vh; */
         gap: 0px;
         padding: 10px;
         margin: auto;
@@ -115,8 +118,8 @@ backdrop-filter: blur(10px);
         /* border: 1px solid blue; */
     }
     .tiempoActual .appImage{
-        width: 150px;
-        height:150px;
+        width: 110px;
+        height:110px;
         margin: auto;
         margin-top: 0px;
         /* border: 1px solid violet; */
@@ -138,7 +141,7 @@ backdrop-filter: blur(10px);
         /* border: 1px solid black; */
     }
     .tiempoActual .cajaInferior p{
-    font-size:1.5rem;
+    font-size:1.3rem;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -153,26 +156,29 @@ backdrop-filter: blur(10px);
         height: 100%;   
     }
     .tiempoActual .cajaTextoLateral{
-        width: 90%;
-        height: 90%;
+        width: 95%;
+        /* height: 50%; */
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        margin-left:20px;
-        justify-content: center;
+        /* margin: auto; */
+        justify-content: space-around;
         align-items: center;
-        margin-top: 10px;
+        margin-top: 5px;
         border-radius: 5px;
         background: rgba(0, 0, 0, 0.50);
         backdrop-filter: blur(10px);
         /* border: 1px solid red; */
+        padding: 5px;
         }
         .tiempoActual .cajaTextoLateral p{
-            margin-left: 7px;
-            font-size: 0.9rem;
-            width: 70%;
+            /* margin-left: 7px; */
+            font-size: 0.8rem;
+            width: 40%;
+            height:auto;
+            margin-top: 7px;
             gap:0px;
-            padding: 4px; 
+            padding:5px; 
             border-radius: 5px;
             background: rgba(0, 0, 0, 0.50);
             backdrop-filter: blur(10px);

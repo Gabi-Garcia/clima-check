@@ -87,8 +87,8 @@ export const TiempoActualCincoCiudades = () => {
               <p>Pres Atmosférica: {weatherData.list[0].main.pressure} hPa</p>
               <p>Humedad: {weatherData.list[0].main.humidity}%</p>
               <p>Clima: {weatherData.list[0].weather[0].main}</p>
-              <p>País: {weatherData.city.country}</p>
-              <p>Ciudad: {weatherData.city.name}</p>
+              {/* <p>País: {weatherData.city.country}</p>
+              <p>Ciudad: {weatherData.city.name}</p> */}
             </div>
         </div>
         )}

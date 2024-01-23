@@ -68,7 +68,7 @@ const TiempoActualEnMiUbicacion = () => {
                     <p>Sensación térmica: {Math.round(weatherData.main.feels_like)}°C</p>
                     <p>Temperatura mínima: {Math.round(weatherData.main.temp_min)}°C</p>
                     <p>Temperatura máxima: {Math.round(weatherData.main.temp_max)}°C</p>
-                    <p>Humedad: {weatherData.main.humidity}%</p>
+                    <p>Humedad del: {weatherData.main.humidity}%</p>
                     <p>Pres Atmosférica: {weatherData.main.pressure} hPa</p>
                     <p>Amanecer: {convertirUnixATiempo(weatherData.sys.sunrise)}</p>
                     <p>Atardecer: {convertirUnixATiempo(weatherData.sys.sunset)}</p>

@@ -62,18 +62,17 @@ export const PrevisiondDelTiempoCincoDíasEnCiudadSeleccionada = () => {
                <div className='cajaLateral'>
                <p>Día {obtenerNombreDia(index)}</p>
               <p>Temperatura: {Math.round(forecast.main.temp)}°C</p>
-              <p>Temperatura: {Math.round(forecast.main.temp)}°C</p>
                 <p>Sensación térmica: {Math.round(forecast.main.feels_like)}°C</p>
                 <p>Temperatura mínima: {Math.round(forecast.main.temp_min)}°C</p>
                 <p>Temperatura máxima: {Math.round(forecast.main.temp_max)}°C</p>
-                <p>Humedad: {forecast.main.humidity}%</p>
-                <p>Presión Atmosférica: {forecast.main.pressure} hPa</p>
-                <p>Visibilidad: {Math.round(forecast.visibility / 1000)} km</p>
+                <p>Pres. Atmosférica: {forecast.main.pressure} hPa</p>
                 <p>Descripción: {forecast.weather[0].description}</p>
                 <p>Nubosidad variable: {forecast.clouds.all}%</p>
-                <p>Clima: {forecast.weather[0].main}</p>
-                <p>País: {weatherData.city.country}</p>
-                <p>Ciudad: {weatherData.city.name}</p>
+                {/* <p>Clima: {forecast.weather[0].main}</p>
+                <p>País: {weatherData.city.country}</p> */}
+                <p>Humedad: {forecast.main.humidity}%</p>
+                <p>Visibilidad: {Math.round(forecast.visibility / 1000)} km</p>
+                {/* <p>Ciudad: {weatherData.city.name}</p> */}
               <img
                 src={`http://openweathermap.org/img/w/${forecast.weather[0].icon}.png`}
                 alt={forecast.weather[0].description}
