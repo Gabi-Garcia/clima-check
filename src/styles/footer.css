@@ -63,6 +63,7 @@
     background: rgba(255, 255, 255, 0.30);
     backdrop-filter: blur(0px);
     border-radius: 5px;
+    position: relative;
     /* border: 1px solid blue; */
   }
   .footer footer ul{

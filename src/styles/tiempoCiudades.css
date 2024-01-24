@@ -146,7 +146,7 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction:row;
-        width: 80vw;
+        width: 70vw;
         margin: auto;
         align-items: center;
         /* justify-content: center; */
@@ -191,13 +191,15 @@
     }
     .tiempoCiudades .cajaTextoLateral p{
         font-size: 0.8rem;
-        width:40%;
-        gap: 5px;
-        padding: 6px; 
-        border-radius: 5px;
-        background: rgba(0, 0, 0, 0.50);
-        backdrop-filter: blur(10px);
-        /* border: 1px solid yellow; */
+            width: 40%;
+            height:auto;
+            margin-top: 7px;
+            gap:0px;
+            padding:5px; 
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.50);
+            backdrop-filter: blur(10px);
+            /* border: 1px solid yellow; */
     }
     .navLink{
         display: flex;
