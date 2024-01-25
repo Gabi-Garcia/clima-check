@@ -13,8 +13,7 @@ import TiempoCincoDíasEnMiUbicación from './pages/TiempoCincoDíasEnMiUbicaci�
 import TiempoActualCincoCiudades from './pages/TiempoActualCincoCiudades.jsx'
 import PrevisiondDelTiempoCincoDíasEnCiudadSeleccionada from './pages/PrevisiondDelTiempoCincoDíasEnCiudadSeleccionada.jsx'
 import NotFound from'./pages/NotFound.jsx'
-
-
+import './styles/main.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 

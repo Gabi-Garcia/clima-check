@@ -10,6 +10,7 @@ display: flex;
 flex-wrap: wrap;
 padding: 0;
 margin: 0;
+border: 1px solid yellow;
 }
 .nav{
   width:90vw;
@@ -47,7 +48,7 @@ margin: 0;
 .nav nav .navLink:hover{
   color:#242424;
 }
-/* } */
+
 
 /*MOBILE*/
 @media(min-width: 320px) and (max-width: 768px){
