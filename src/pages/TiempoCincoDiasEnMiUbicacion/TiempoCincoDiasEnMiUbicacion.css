@@ -1,0 +1,248 @@
+@media(min-width: 769px) and (max-width: 1500px){
+    h1 {
+        width: 90%;
+        margin: auto;
+        margin-top: 0px;
+        font-size:5rem;
+        /* border: 1px solid yellow; */
+      } 
+    .cincoDiasCaja{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: space-around;
+        /* border: 1px solid violet; */
+    }
+    .cincoDiasCaja > .nombreDeCiudad{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+        width:70%;
+        /* border: 1px solid white; */
+      }   
+      .cincoDiasCaja > .nombreDeCiudad h3{
+        margin: auto;
+        display: flex;
+        font-size: 1.5rem;
+          /* border: 1px solid red; */
+        }
+        .cincoDiasCaja > .nombreDeCiudad h2{
+            display: flex;
+            font-size: 1.6rem;
+            width: 20%;
+            margin:auto;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            color: rgba(0, 0, 0, 0.50);
+            /* border: 1px solid yellow; */
+        }
+        .cincoDiasCajaGrande{
+            width:90%;
+            margin: auto;
+            /* border: 1px solid green; */
+        }
+.cincoDias{
+    width: 30%;
+    min-width: 340px;
+    min-height: 300px;
+    gap: 0px;
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.30);
+    backdrop-filter: blur(10px); 
+    margin-top: 20px;  
+    margin-left: 10px;
+    /* border: 1px solid blue; */
+}
+.cincoDias .cajaLateral{  
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: auto;
+    padding: 10px;
+    justify-content: space-around;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 0, 0, 0.50);
+    /* border: 1px solid red; */
+}
+.cincoDias > .cajaLateral > .cajitaDoble{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; 
+    justify-content: center;
+    width: 47%;
+    height: 35px;
+    padding: 0px;
+    margin-top: 15px;
+    margin-left: 7px;
+    /* border: 1px solid red; */
+}
+.cincoDias > .cajaLateral > .cajitaDoble p{
+    width: 50%;
+    /* height: 10px; */
+    align-items: center;
+    text-align: center;
+    padding: 12px;
+    margin-left: 0px;
+    margin-bottom: 15px;
+    /* border: 1px solid blue; */
+}
+.cincoDias > .cajaLateral > .cajitaDoble > .cajitaDobleImg{
+height: 45px;
+width: 45px;
+/* border: 1px solid yellow; */
+}
+.cincoDias > .cajaLateral > .cajitaDoble > .cajitaDobleImg img{
+width: 90%;
+height: 90%;
+}
+.cincoDias > .cajaLateral p{
+    font-size: 0.7rem;
+    width: 40%;
+    display:flex;
+    text-align:center;
+    margin-top: 10px;
+    margin: auto;
+    gap: 0px;
+    padding: 10px;  
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(10px);
+    
+    &&:hover{
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.904);
+        color: rgba(0, 0, 0, 0.993)
+    }
+    /* border: 1px solid green; */
+}
+}
+/******************************************************************************************/
+/***********************************MOBILE*************************************************/
+/******************************************************************************************/
+@media(min-width: 320px) and (max-width: 768px){
+    h1 {
+        display: none;
+        /* border: 1px solid yellow; */
+      } 
+      .nombreDeCiudad{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+        width: 80%;
+        /* border: 1px solid white; */
+      }   
+       .nombreDeCiudad h3{
+          margin: auto;
+          font-size: 1.2rem;
+          /* border: 1px solid red; */
+        }
+         .nombreDeCiudad h2{
+          display: flex;
+          font-size: 1.4rem;
+          width: 20%;
+          margin:auto;
+          text-align: center;
+          justify-content: center;
+          color: rgba(0, 0, 0, 0.50);
+          /* border: 1px solid yellow; */
+        }
+        .cincoDiasCajaGrande{
+            width:90%;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            /* border: 1px solid green; */
+        }
+    .cincoDias{
+        width: 90%;
+        gap: 5px;
+        padding: 10px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        font-size: 0.8rem;
+        background-color: rgb(136, 132, 132);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.30);
+        backdrop-filter: blur(10px);
+        margin-top: 20px;  
+        /* border: 1px solid blue; */
+    }
+    .cincoDias .cajaLateral{  
+        width: 90%;
+        height: 80%;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 0px;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.50);
+        backdrop-filter: blur(10px);
+        /* border: 1px solid red; */
+    }
+    .cincoDias .cajaLateral .cajitaDoble{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        min-width:50%;
+        height: 40px;
+        margin: auto;
+        /* border: 1px solid violet; */
+    }
+    .cincoDias .cajaLateral .cajitaDoble p{
+        text-align: center;
+        font-size: 0.8rem;
+        width: 45%;
+        margin: auto;
+        gap: 0px;
+        padding: 5px;  
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.50);
+        backdrop-filter: blur(10px);
+        /* border: 1px solid green; */
+    }
+    .cincoDias .cajaLateral .cajitaDoble .cajitaDobleImg{
+        display: flex;
+        flex-wrap: wrap;
+        width: 40px;
+        height: 40px;
+        /* border: 1px solid red; */
+    }
+    .cincoDias .cajaLateral .cajitaDoble .cajitaDobleImg img{
+        width: 100%;
+        height: 100%;
+    }
+    .cincoDias .cajaLateral p{
+        text-align: center;
+        font-size: 0.7rem;
+        width: 40%;
+        margin: auto;
+        margin-top: 10px;
+        gap: 0px;
+        padding: 5px;  
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.50);
+        backdrop-filter: blur(10px);
+        /* border: 1px solid yellow; */
+    }
+}

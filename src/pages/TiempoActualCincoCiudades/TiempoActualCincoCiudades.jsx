@@ -3,15 +3,15 @@
 /* eslint-disable no-unused-vars */
 import { NavLink, Outlet } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import'../styles/tiempoCiudades.css'
-import convertirUnixATiempo from '../components/ConvertirUnixATiempo';
+import'../../pages/TiempoActualCincoCiudades/TiempoActualCincoCiudades.css'
+import convertirUnixATiempo from '../../components/ConvertirUnixATiempo';
 
 
 export const TiempoActualCincoCiudades = () => {
-  // Arreglo de ciudades
+  // Array de ciudades
   //const ciudades = ['Buenos Aires', 'Nueva York', 'Londres', 'Tokio', 'Sidney', 'Barcelona', 'Santiago de Chile', 'Lima', 'Helsinki', 'Madrid'];
   const ciudades = [
-    'Barcelona','Ámsterdam', 'Ankara', 'Auckland', 'Berlín', 'Bogotá', 'Brisbane', 'Brasilia', 'Buenos Aires', 'Canberra', 'Ciudad de Belice',
+   'Ámsterdam', 'Ankara', 'Auckland', 'Barcelona', 'Berlín', 'Bogotá', 'Brisbane', 'Brasilia', 'Buenos Aires', 'Canberra', 'Ciudad de Belice',
     'Ciudad de Guatemala', 'Ciudad de México', 'Doha', 'Honolulu', 'Jerusalén', 'La Habana', 'Lima', 'Lisboa', 'Londres', 'Madrid',
     'Managua', 'Melbourne', 'Nouméa', 'Nueva Delhi', 'Ottawa', 'Panamá', 'París', 'Pekín', 'Port Moresby', 'Quetzaltenango', 'Riyadh',
     'Roma', 'San José', 'San Pedro Sula', 'San Salvador', 'Santiago', 'Sídney', 'Suva', 'Tegucigalpa', 'Teherán', 'Tokio', 'Varsovia',
@@ -51,25 +51,30 @@ export const TiempoActualCincoCiudades = () => {
   };
   return (
     <> 
-      <div>
       <h1>Clima Check</h1>
-        <h2>Elije una Ciudad para ver su Clima Actual</h2>
-        <select className='select' value={ciudadSeleccionada} onChange={handleChangeCiudad}>
-        
-          {ciudades.map((ciudad) => (
-            <option key={ciudad} value={ciudad}>
+        <h2 className='subtitulo'>Elije una Ciudad para ver su clima actual</h2>
+        <div className='select'>
+          <select className='select' value={ciudadSeleccionada} onChange={handleChangeCiudad}>
+            {ciudades.map((ciudad) => (
+              <option key={ciudad} value={ciudad}> 
               {ciudad}
-            </option>
-          ))}
-        </select>
+              </option>
+                ) 
+              )  
+            }
+          </select>
+        </div>
         {weatherData && ( 
         <div className='tiempoCiudades'>
+            <div className='cajaInferior'>
             <div className='appImage'>
                 <img src="/Black Couple Outdoors 1.png" alt="appImage" />
             </div>
-            <div className='cajaInferior'>
+                <div>
                 <p>{ciudadSeleccionada}</p>
                 <p>{Math.round(weatherData.list[0].main.temp)}°C</p>
+                </div>
+                
                 <div className='imgBox'>
                     <img
                       src={`http://openweathermap.org/img/w/${weatherData.list[0].weather[0].icon}.png`}
@@ -92,7 +97,6 @@ export const TiempoActualCincoCiudades = () => {
             </div>
         </div>
         )}
-      </div>
       
     </>
   )

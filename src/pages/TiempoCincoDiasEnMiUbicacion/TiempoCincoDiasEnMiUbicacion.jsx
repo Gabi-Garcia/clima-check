@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
-import '../styles/tiempoCincoDías.css'
-import obtenerNombreDia from '../components/ObtenerNombreDía';
-import convertirUnixATiempo from '../components/ConvertirUnixATiempo';
+import '../../pages/TiempoCincoDiasEnMiUbicacion/TiempoCincoDiasEnMiUbicacion.css'
+import obtenerNombreDia from '../../components/ObtenerNombreDía';
+import convertirUnixATiempo from '../../components/ConvertirUnixATiempo';
 
 
 
@@ -41,41 +41,46 @@ const TiempoCincoDiasEnMiUbicacion = () => {
 
   // Cargar la geolocalización al cargar la aplicación
   useEffect(() => {
-    getLocation();
+    getLocation(); 
   }, []);
    
   return (
     <div>
-       <h1>Clima Check</h1>
-        <img src="/Black Couple Outdoors 1.png" alt="appImage" />
+        <h1>Clima Check</h1>
         {weatherData && weatherData.list && (
-          <div className='cincoDiasCaja'>
-          <h2>Previsión por cinco días en {weatherData.city.name}</h2>
+      <div className='cincoDiasCajaGrande'>
+        <div className='cincoDiasCaja'>
+            <div className='nombreDeCiudad'>
+              <h3>Clima por cinco días en </h3>    
+              <h2>{weatherData.city.name}</h2>      
+            </div>
             {weatherData.list.slice(0, 5).map((forecast, index) => (
               <div key={index} className='cincoDias'>
                 <div className='cajaLateral'>
-                <p>Día {obtenerNombreDia(index)}</p>
-                <p>Temperatura: {Math.round(forecast.main.temp)}°C</p>
-                <p>Sensación térmica: {Math.round(forecast.main.feels_like)}°C</p>
-                <p>Temperatura mínima: {Math.round(forecast.main.temp_min)}°C</p>
-                <p>Temperatura máxima: {Math.round(forecast.main.temp_max)}°C</p>
-                <p>Pres. Atmosférica: {forecast.main.pressure}hPa</p>
-                <p>Descripción: {forecast.weather[0].description}</p>
-                <p>Nubosidad variable: {forecast.clouds.all}%</p>
-                <p>Humedad: {forecast.main.humidity}%</p>
-                <p>Visibilidad: {Math.round(forecast.visibility / 1000)} km</p>
-                {/* <p>Clima: {forecast.weather[0].main}</p> */}
-                {/* <p>País: {weatherData.city.country}</p>
-                <p>Ciudad: {weatherData.city.name}</p> */}
-                <img
-                  src={`http://openweathermap.org/img/w/${forecast.weather[0].icon}.png`}
-                  alt={forecast.weather[0].description}
-                  onError={(e) => console.error("Error al cargar la imagen:", e)}
-                />
+                  <div className='cajitaDoble'>
+                      <p>{obtenerNombreDia(index)} </p>
+                      <div className='cajitaDobleImg'>
+                          <img
+                              src={`http://openweathermap.org/img/w/${forecast.weather[0].icon}.png`}
+                              alt={forecast.weather[0].description}
+                              onError={(e) => console.error("Error al cargar la imagen:", e)}
+                          />
+                      </div>
+                  </div>     
+                      <p>Temperatura: {Math.round(forecast.main.temp)}°C</p>
+                      <p>Sensación térmica: {Math.round(forecast.main.feels_like)}°C</p>
+                      <p>Temperatura mínima: {Math.round(forecast.main.temp_min)}°C</p>
+                      <p>Temperatura máxima: {Math.round(forecast.main.temp_max)}°C</p>
+                      <p>Pres. Atmosférica: {forecast.main.pressure}hPa</p>
+                      <p>Descripción: {forecast.weather[0].description}</p>
+                      <p>Nubosidad variable: {forecast.clouds.all}%</p>
+                      <p>Humedad: {forecast.main.humidity}%</p>
+                      <p>Visibilidad: {Math.round(forecast.visibility / 1000)} km</p>
                 </div>
               </div>
             ))}
-          </div>
+        </div>
+      </div> 
         )}
     </div>
   );

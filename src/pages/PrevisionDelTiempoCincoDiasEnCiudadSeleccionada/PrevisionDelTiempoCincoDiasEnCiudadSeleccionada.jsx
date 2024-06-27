@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
-import'../styles/climaCincoDiasCiudades.css'
-import obtenerNombreDia from '../components/ObtenerNombreDía';
+import'../../pages/PrevisionDelTiempoCincoDiasEnCiudadSeleccionada/PrevisionDelTiempoCincoDiasEnCiudadSeleccionada.css'
+import obtenerNombreDia from '../../components/ObtenerNombreDía';
 
-export const PrevisiondDelTiempoCincoDíasEnCiudadSeleccionada = () => {
-  // Arreglo de ciudades
+export const PrevisionDelTiempoCincoDiasEnCiudadSeleccionada = () => {
+  // Array de ciudades
   const ciudades = ['Barcelona','Ámsterdam', 'Ankara', 'Auckland', 'Berlín', 'Bogotá', 'Brisbane', 'Brasilia', 'Buenos Aires', 'Canberra', 'Ciudad de Belice',
   'Ciudad de Guatemala', 'Ciudad de México', 'Doha', 'Honolulu', 'Jerusalén', 'La Habana', 'Lima', 'Lisboa', 'Londres', 'Madrid',
   'Managua', 'Melbourne', 'Nouméa', 'Nueva Delhi', 'Ottawa', 'Panamá', 'París', 'Pekín', 'Port Moresby', 'Quetzaltenango', 'Riyadh',
@@ -43,48 +43,49 @@ export const PrevisiondDelTiempoCincoDíasEnCiudadSeleccionada = () => {
   };
   return (
  <>
-    <div>
     <h1>Clima Check</h1>
-      <img src="/Black Couple Outdoors 1.png" alt="appImage" />
-          <h2>Selecciona una ciudad para ver su clima los próximos cinco días</h2>
-        <select className='select' value={ciudadSeleccionada} onChange={handleChangeCiudad}>
-          {/* Mapear sobre el arreglo de ciudades para generar las opciones del select */}
-          {ciudades.map((ciudad) => (
-            <option key={ciudad} value={ciudad}>
-              {ciudad}
-            </option>
-          ))}
-        </select>
+      {/* <img src="/Black Couple Outdoors 1.png" alt="appImage" /> */}
+        <h2 className='subtitulo'>Selecciona una ciudad para ver su clima los próximos cinco días</h2>
+        <div className='select'>
+               <select className='select' value={ciudadSeleccionada} onChange={handleChangeCiudad}>
+                  {/* Mapear sobre el arreglo de ciudades para generar las opciones del select */}
+                  {ciudades.map((ciudad) => (
+                    <option key={ciudad} value={ciudad}>
+                      {ciudad}
+                    </option>
+                    ))}
+                </select>
+        </div>
       {weatherData && weatherData.list && (
-        <div>
+        <div className='cajaGrande'>
           {weatherData.list.slice(0, 5).map((forecast, index) => (
             <div key={index} className='cincoDiasCiudades'>
-               <div className='cajaLateral'>
-               <p>Día {obtenerNombreDia(index)}</p>
-              <p>Temperatura: {Math.round(forecast.main.temp)}°C</p>
+              <div className='cajaLateral'>
+                <div className='cajitaDoble'>
+                <p>{obtenerNombreDia(index)}</p>
+                <div className='cajitaDobleImg'>
+                <img
+                src={`http://openweathermap.org/img/w/${forecast.weather[0].icon}.png`}
+                alt={forecast.weather[0].description}
+                onError={(e) => console.error("Error al cargar la imagen:", e)}
+                />
+                </div>
+                </div>
+                <p>Temperatura: {Math.round(forecast.main.temp)}°C</p>
                 <p>Sensación térmica: {Math.round(forecast.main.feels_like)}°C</p>
                 <p>Temperatura mínima: {Math.round(forecast.main.temp_min)}°C</p>
                 <p>Temperatura máxima: {Math.round(forecast.main.temp_max)}°C</p>
                 <p>Pres. Atmosférica: {forecast.main.pressure} hPa</p>
                 <p>Descripción: {forecast.weather[0].description}</p>
                 <p>Nubosidad variable: {forecast.clouds.all}%</p>
-                {/* <p>Clima: {forecast.weather[0].main}</p>
-                <p>País: {weatherData.city.country}</p> */}
                 <p>Humedad: {forecast.main.humidity}%</p>
                 <p>Visibilidad: {Math.round(forecast.visibility / 1000)} km</p>
-                {/* <p>Ciudad: {weatherData.city.name}</p> */}
-              <img
-                src={`http://openweathermap.org/img/w/${forecast.weather[0].icon}.png`}
-                alt={forecast.weather[0].description}
-                onError={(e) => console.error("Error al cargar la imagen:", e)}
-              />
-               </div>
+              </div>
             </div>
           ))}
         </div>
       )}
-    </div>
   </>  
   );
 }
-export default PrevisiondDelTiempoCincoDíasEnCiudadSeleccionada
+export default PrevisionDelTiempoCincoDiasEnCiudadSeleccionada

@@ -1,56 +1,61 @@
-/* @media(min-width: 769px) and (max-width: 1500px){ */
+/* @media(min-width: 769px) and (max-width: 1500px){
   #root {
-    margin: 0 auto;
+    margin: auto;
     padding: 0rem;
     text-align: center;
+   
   }
-.app{
-width: 100%;
+.App{
+width: 95%;
 display: flex;
 flex-wrap: wrap;
 padding: 0;
-margin: 0;
-border: 1px solid yellow;
+margin: auto;
+
 }
+header {
+  width: 100%;
+  height: 20vh;
+  margin: auto;
+
+  }
+ 
 .nav{
   width:90vw;
+  height: 10vh;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  padding:0px;
+  padding:20px;
   margin: auto;
-  margin-top: 40px;
-  /* border: 1px solid blue; */
+  margin-top: 10px;
 } 
 .nav nav{
   width: 100%;
+  height: 10vh;
   display: flex;
   flex-wrap: wrap;
   padding: 0px;
   margin:auto;
   text-align: center;
   align-items: center;
-  /* border: 1px solid red; */
 }
 .nav nav .navLink{
   display: flex;
   flex-wrap: wrap; 
   flex-direction: row;
-  margin: auto;
   margin-top:10px;
-  padding: 0px;
-  font-size: 1.3rem;
+  padding: 10px;
+  font-size: 1.2rem;
   text-decoration: inherit;
   color: rgba(255, 255, 255, 0.87);
-  justify-content: space-between;
-  /* border: 1px solid rgb(9, 255, 0); */
 }
 .nav nav .navLink:hover{
   color:#242424;
 }
 
+}
 
-/*MOBILE*/
 @media(min-width: 320px) and (max-width: 768px){
 
   .nav{
@@ -61,7 +66,6 @@ border: 1px solid yellow;
     padding:0px;
     margin: auto;
     margin-top: 20px;
-    /* border: 1px solid blue; */
   } 
   .nav nav{
     width: 100%;
@@ -72,7 +76,6 @@ border: 1px solid yellow;
     margin:auto;
     text-align: center;
     align-items: center;
-    /* border: 1px solid red; */
   }
   .nav nav .navLink{
     display: flex;
@@ -85,6 +88,5 @@ border: 1px solid yellow;
     text-decoration: inherit;
     color: rgba(255, 255, 255, 0.87);
     justify-content: space-between;
-    /* border: 1px solid rgb(9, 255, 0); */
   }
-}
+} */

@@ -2,9 +2,9 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { NavLink, Outlet } from 'react-router-dom'
-import GeoLocationComponent from '../components/GeoLocationComponent';
-import '../styles/tiempoActual.css'
-import convertirUnixATiempo from '../components/ConvertirUnixATiempo';
+import GeoLocationComponent from '../../components/GeoLocationComponent';
+import '../../pages/TiempoActualEnMiUbicacion/TiempoActualEnMiUbicacion.css'
+import convertirUnixATiempo from '../../components/ConvertirUnixATiempo';
 
 
 const TiempoActualEnMiUbicacion = () => {
@@ -45,15 +45,19 @@ const TiempoActualEnMiUbicacion = () => {
 
   return (
   <> 
-      <GeoLocationComponent />
+      <GeoLocationComponent /> 
       <h1>Clima Check</h1>
       {weatherData && (
         <>
-            <h2>Clima actual en {weatherData.name}</h2>    
+         <div className='nombreDeCiudadActual'> 
+            <h3>Clima actual en </h3>    
+              <h2>{weatherData.name}</h2>      
+         </div>
           <div className='tiempoActual'>
-            <div className='appImage'>
-              <img src="/Black Couple Outdoors 1.png" alt="appImage" />
-            </div>
+            <div className='cajaIzquierda'>
+                <div className='appImage'>
+                   <img src="/Black Couple Outdoors 1.png" alt="appImage" />
+                </div>
             <div className='cajaInferior'>
                 <p>{Math.round(weatherData.main.temp)}°C</p>
                 <p>{weatherData.name}</p>
@@ -62,7 +66,9 @@ const TiempoActualEnMiUbicacion = () => {
                     <img src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`} alt={weatherData.name} onError={(e) => console.error("Error al cargar la imagen:", e)} />
                   </div>
             </div>
-            <NavLink  className="navLink" to="TiempoCincoDíasEnMiUbicación ">Previsión por cinco días</NavLink>
+              <NavLink  className="navLink" to="TiempoCincoDíasEnMiUbicación ">Previsión por cinco días</NavLink>
+            </div>
+              
               <div className='cajaTextoLateral'>
                     <p>Temperatura: {Math.round(weatherData.main.temp)}°C</p>
                     <p>Sensación térmica: {Math.round(weatherData.main.feels_like)}°C</p>

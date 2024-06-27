@@ -1,0 +1,265 @@
+@media(min-width: 769px) and (max-width: 1500px){
+
+    h1 {
+        width: 90%;
+        margin: auto;
+        margin-top: 0px;
+        font-size:5rem;
+        /* border: 1px solid yellow; */
+      } 
+      h2{
+        display: flex;
+        width: 50%;
+        margin: auto;
+        justify-content: center;
+        /* border: 1px solid red; */
+      }
+      .select {
+          width: 50%;
+          margin: auto;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          margin-top: 30px;
+          /* border: 1px solid blue; */
+       }
+      select{
+          padding:7px;
+          cursor: pointer; 
+          width: 40%;
+          font-size: 1.1rem;
+          border-radius: 10px;
+          margin: auto;
+          margin-top:50px;
+          /* border:1px solid yellow */
+        } 
+        .tiempoCiudades{
+            width: 65%;
+            padding: 20px;
+            margin: auto;
+            margin-top: 60px;
+            display: flex;
+            flex-wrap: wrap; 
+            flex-direction: row;
+            justify-content: space-around;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.30);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 0, 0, 0.50);
+            /* border: 1px solid blue; */
+        }
+        .tiempoCiudades > .cajaInferior{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 15px;
+            margin-left: 0px;
+            width: 30%;
+            padding: 10px;
+            /* border: 1px solid green; */
+        }
+        .tiempoCiudades > .cajaInferior > .appImage{
+            width: 90px;
+            height:90px;
+            margin: auto;
+            margin-top: 0px;
+            /* border: 1px solid violet; */
+        }
+        .tiempoCiudades > .cajaInferior > .appImage img{
+            width: 100%;
+            height: 100%;
+        }
+.tiempoCiudades > .cajaInferior p{
+    justify-content: center;
+    font-size:1.3rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+.tiempoCiudades > .cajaInferior > .imgBox{
+    width: 50px;
+    height: 50px;
+    margin-top:5px;  
+}
+.tiempoCiudades > .cajaInferior > .imgBox img{
+    width:100%;
+    height: 100%;   
+   
+}
+.navLink{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    font-size: 1rem;
+    color: white;
+}
+.tiempoCiudades .cajaTextoLateral{
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left:0px;
+    padding: 10px;
+    justify-content: space-around;
+    margin-top: 25px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 0, 0, 0.50);
+    /* border: 1px solid red; */
+}
+.tiempoCiudades .cajaTextoLateral p{
+    text-align: center;
+    margin-left: 0px;
+    font-size: 0.8rem;
+    width: 28%;
+    gap:0px;
+    padding: 5px; 
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 0, 0, 0.50);
+
+    &&:hover{
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.904);
+        color: rgba(0, 0, 0, 0.993)
+    }
+    /* border: 1px solid yellow; */
+}
+
+}
+/******************************************************************************************************/
+/***********************************************MOBILE************************************************/
+/******************************************************************************************************/
+@media(min-width: 320px) and (max-width: 768px){
+    h2.subtitulo{
+        margin: auto;
+        margin-top:20px;
+        text-align: center;
+        width: 90%;
+        font-size: 1.1rem;
+        /* border: 1px solid red; */
+    }
+    .select {
+        width: 55%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 30px;
+        /* border: 1px solid blue; */
+     }
+    select.select{
+        padding:7px;
+        cursor: pointer; 
+        width: 100%;
+        font-size: 1rem;
+        border-radius: 10px;
+        margin: auto;
+        margin-top:20px;
+        /* border:1px solid yellow */
+      } 
+    .tiempoCiudades{
+        width: 80vw;
+        gap: 0px;
+        padding: 10px;
+        margin: auto;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap; 
+        flex-direction: column;
+        font-size: 1.1rem;
+        background-color: rgb(136, 132, 132);
+        background: rgba(255, 255, 255, 0.30);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        /* border: 1px solid blue; */
+    }
+    .tiempoCiudades .appImage{
+        width: 100px;
+        height:100px;
+        margin: auto;
+        margin-top: 0px;
+        /* border: 1px solid violet; */
+    }
+    .tiempoCiudades .appImage img{
+        width: 100%;
+        height: 100%;
+    }
+    .tiempoCiudades .cajaInferior{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction:column;
+        width: 80vw;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+        gap:0px;
+        padding: 0px;
+        margin-top: 0px;
+        /* border: 1px solid black; */
+    }
+    .tiempoCiudades .cajaInferior p{
+        text-align: center;
+        justify-content: center;
+    font: size 1.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding:0px;
+    margin: auto;
+    /* border: 1px solid red; */
+    } 
+    .tiempoCiudades .cajaInferior .imgBox{
+        width: 40px;
+        height: 40px;
+        margin:auto; 
+        /* border: 1px solid blue; */
+    }
+    .tiempoCiudades .cajaInferior .imgBox img{
+        width:100%;
+        height: 100%;   
+    }
+    .tiempoCiudades .cajaTextoLateral{
+    width: 80vw;
+    height: 55vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left:0px;
+    margin: auto;
+    justify-content:space-around;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(10px);
+    /* border: 1px solid red; */
+    }
+    .tiempoCiudades .cajaTextoLateral p{
+        text-align: center;
+        font-size: 0.8rem;
+            width: 40%;
+            height:35px;
+            margin-top:15px;
+            gap:0px;
+            padding:7px; 
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.50);
+            backdrop-filter: blur(10px);
+            /* border: 1px solid yellow; */
+    }
+    .navLink{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        font-size:1rem;
+        color: white;
+    }
+
+}
