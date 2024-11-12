@@ -44,7 +44,6 @@
             justify-content: space-around;
             border-radius: 10px;
             background: rgba(255, 255, 255, 0.30);
-            backdrop-filter: blur(10px);
             border: 2px solid rgba(0, 0, 0, 0.50);
             /* border: 1px solid blue; */
         }
@@ -78,6 +77,8 @@
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    font-weight: bolder;
+    color: black;
     /* border: 1px solid red; */
 }
 .tiempoCiudades > .cajaInferior > .imgBox{
@@ -95,7 +96,9 @@
     flex-wrap: wrap;
     margin: auto;
     font-size: 1rem;
-    color: white;
+    font-weight: bolder;
+    color: black;
+    /* color: white; */
 }
 .tiempoCiudades .cajaTextoLateral{
     width: 50%;
@@ -109,7 +112,6 @@
     margin-top: 25px;
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.50);
-    backdrop-filter: blur(10px);
     border: 2px solid rgba(0, 0, 0, 0.50);
     /* border: 1px solid red; */
 }
@@ -122,7 +124,6 @@
     padding: 5px; 
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.50);
-    backdrop-filter: blur(10px);
     border: 2px solid rgba(0, 0, 0, 0.50);
 
     &&:hover{
@@ -178,7 +179,6 @@
         background-color: rgb(136, 132, 132);
         background: rgba(255, 255, 255, 0.30);
         border-radius: 10px;
-        backdrop-filter: blur(10px);
         /* border: 1px solid blue; */
     }
     .tiempoCiudades .appImage{
@@ -206,14 +206,16 @@
         /* border: 1px solid black; */
     }
     .tiempoCiudades .cajaInferior p{
-        text-align: center;
-        justify-content: center;
+    text-align: center;
+    justify-content: center;
     font: size 1.1rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     padding:0px;
     margin: auto;
+    font-weight: bolder;
+    color: black;
     /* border: 1px solid red; */
     } 
     .tiempoCiudades .cajaInferior .imgBox{
@@ -238,7 +240,6 @@
     margin-top: 20px;
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.50);
-    backdrop-filter: blur(10px);
     /* border: 1px solid red; */
     }
     .tiempoCiudades .cajaTextoLateral p{
@@ -251,7 +252,6 @@
             padding:7px; 
             border-radius: 5px;
             background: rgba(0, 0, 0, 0.50);
-            backdrop-filter: blur(10px);
             /* border: 1px solid yellow; */
     }
     .navLink{
@@ -259,7 +259,8 @@
         flex-wrap: wrap;
         margin: auto;
         font-size:1rem;
-        color: white;
+        font-weight: bolder;
+        color: black;
     }
 
 }

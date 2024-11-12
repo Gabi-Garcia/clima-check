@@ -40,7 +40,6 @@
     justify-content: space-around;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.30);
-    backdrop-filter: blur(10px);
     border: 2px solid rgba(0, 0, 0, 0.50);
     /* border: 1px solid blue; */
 }
@@ -87,6 +86,8 @@
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    font-weight: bolder;
+    color: black;
     /* border: 1px solid red; */
 }
 .tiempoActual > .cajaInferior > .imgBox{
@@ -107,7 +108,8 @@
     margin-top: 0px;
     margin-left: 0px;
     font-size: 1rem;
-    color: white;
+    font-weight: bolder;
+    color: black;
 }
 .tiempoActual > .cajaTextoLateral{
     width: 60%;
@@ -121,7 +123,6 @@
     margin-top: 10px;
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.50);
-    backdrop-filter: blur(10px);
     border: 2px solid rgba(0, 0, 0, 0.50);
     /* border: 1px solid violet; */
 }
@@ -133,9 +134,7 @@
     padding: 10px; 
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.50);
-    backdrop-filter: blur(10px);
     border: 2px solid rgba(0, 0, 0, 0.50);
-
     &&:hover{
         cursor: pointer;
         background-color: rgba(255, 255, 255, 0.904);
@@ -190,7 +189,6 @@
         font-size: 1.1rem;
         background: rgba(255, 255, 255, 0.30);
         border-radius: 10px;
-        backdrop-filter: blur(10px);
         /* border: 1px solid blue; */
     }
     .tiempoActual .appImage{
@@ -221,6 +219,8 @@
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    font-weight: bolder;
+    color: black;
     }
     .tiempoActual .cajaInferior .imgBox{
         width: 30px;
@@ -239,7 +239,8 @@
         margin-top: 5px;
         margin-left: 10px;
         font-size: 1rem;
-        color: white;
+        font-weight: bolder;
+        color: black;
         justify-content: center;
     }
     .tiempoActual .cajaTextoLateral{
@@ -252,7 +253,6 @@
         margin-top: 0px;
         border-radius: 5px;
         background: rgba(0, 0, 0, 0.50);
-        backdrop-filter: blur(10px);
         padding: 5px;
         /* border: 1px solid red; */
         }
@@ -267,7 +267,6 @@
             text-align: center;
             align-items: center;
             background: rgba(0, 0, 0, 0.50);
-            backdrop-filter: blur(10px);
             /* border: 1px solid yellow; */
         }
 }
