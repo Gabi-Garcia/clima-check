@@ -3,105 +3,96 @@
 /* eslint-disable no-unused-vars */
 import { NavLink, Outlet } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import'../../pages/TiempoActualCincoCiudades/TiempoActualCincoCiudades.css'
+import '../../pages/TiempoActualCincoCiudades/TiempoActualCincoCiudades.css';
 import convertirUnixATiempo from '../../components/ConvertirUnixATiempo';
-
+import MySpinner from '../../components/Spinner/Spinner';
 
 export const TiempoActualCincoCiudades = () => {
-  // Array de ciudades
-  //const ciudades = ['Buenos Aires', 'Nueva York', 'Londres', 'Tokio', 'Sidney', 'Barcelona', 'Santiago de Chile', 'Lima', 'Helsinki', 'Madrid'];
   const ciudades = [
-   'Ámsterdam', 'Ankara', 'Auckland', 'Barcelona', 'Berlín', 'Bogotá', 'Brisbane', 'Brasilia', 'Buenos Aires', 'Canberra', 'Ciudad de Belice',
+    'Ámsterdam', 'Ankara', 'Auckland', 'Barcelona', 'Berlín', 'Bogotá', 'Brisbane', 'Brasilia', 'Buenos Aires', 'Canberra', 'Ciudad de Belice',
     'Ciudad de Guatemala', 'Ciudad de México', 'Doha', 'Honolulu', 'Jerusalén', 'La Habana', 'Lima', 'Lisboa', 'Londres', 'Madrid',
     'Managua', 'Melbourne', 'Nouméa', 'Nueva Delhi', 'Ottawa', 'Panamá', 'París', 'Pekín', 'Port Moresby', 'Quetzaltenango', 'Riyadh',
     'Roma', 'San José', 'San Pedro Sula', 'San Salvador', 'Santiago', 'Sídney', 'Suva', 'Tegucigalpa', 'Teherán', 'Tokio', 'Varsovia',
     'Viena', 'Washington D.C.', 'Wellington'
   ];
-  
+
   const ciudadesOrdenadas = ciudades.sort();
   
-  console.log(ciudadesOrdenadas);
-  
-  // Estado para almacenar la ciudad seleccionada
   const [ciudadSeleccionada, setCiudadSeleccionada] = useState(ciudades[0]);
   const [weatherData, setWeatherData] = useState(null);
-
+  const [isLoading, setIsLoading] = useState(false); // Estado para el spinner
 
   useEffect(() => {
-    // Verificar si se tiene la ubicación completa
     if (ciudadSeleccionada) {
-      // Construir la URL para la API de OpenWeather
+      setIsLoading(true); // Inicia el spinner al comenzar la solicitud
       const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${ciudadSeleccionada}&appid=ecce75668fb512c7b4b22a15d930fb7e&units=metric&lang=es`;
-      // Realizar la solicitud a la API de OpenWeather
+
       fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => setWeatherData((data)))
-      .catch(error => console.error('Error al buscar datos:', error)); 
-     
-       console.log('API url: ', apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          setWeatherData(data);
+          setIsLoading(false); // Detiene el spinner después de cargar los datos
+        })
+        .catch(error => {
+          console.error('Error al buscar datos:', error);
+          setIsLoading(false); // Detiene el spinner si ocurre un error
+        });
     }
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [ciudadSeleccionada]);
-    useEffect(() => {
-    }, []);
-  // Manejador de cambio de ciudad
+  }, [ciudadSeleccionada]);
+
   const handleChangeCiudad = (event) => {
     setCiudadSeleccionada(event.target.value);
-    console.log('Ciudad seleccionada: ', event.target.value)
   };
+
   return (
-    <> 
+    <>
       <h1>Clima Check</h1>
-        <h2 className='subtitulo'>Elije una Ciudad para ver su clima actual</h2>
-        <div className='select'>
-          <select className='select' value={ciudadSeleccionada} onChange={handleChangeCiudad}>
-            {ciudades.map((ciudad) => (
-              <option key={ciudad} value={ciudad}> 
+      <h2 className='subtitulo'>Elije una Ciudad para ver su clima actual</h2>
+      <div className='select'>
+        <select className='select' value={ciudadSeleccionada} onChange={handleChangeCiudad}>
+          {ciudades.map((ciudad) => (
+            <option key={ciudad} value={ciudad}>
               {ciudad}
-              </option>
-                ) 
-              )  
-            }
-          </select>
-        </div>
-        {weatherData && ( 
+            </option>
+          ))}
+        </select>
+        {isLoading && <MySpinner />} {/* Spinner aparece justo debajo del h1 */}
+      </div>
+
+      {!isLoading && weatherData && ( 
         <div className='tiempoCiudades'>
-            <div className='cajaInferior'>
+          <div className='cajaInferior'>
             <div className='appImage'>
-                <img src="/Black Couple Outdoors 1.png" alt="appImage" />
+              <img src="/Black Couple Outdoors 1.png" alt="appImage" />
             </div>
-                <div>
-                <p>{ciudadSeleccionada}</p>
-                <p>{Math.round(weatherData.list[0].main.temp)}°C</p>
-                </div>
-                
-                <div className='imgBox'>
-                    <img
-                      src={`http://openweathermap.org/img/w/${weatherData.list[0].weather[0].icon}.png`}
-                      alt={weatherData.city.name}
-                      onError={(e) => console.error("Error al cargar la imagen:", e)}
-                    />   
-                </div>
-            <NavLink className="navLink" to="/PrevisiondDelTiempoCincoDíasEnCiudadSeleccionada">Previsión cinco días en Ciudades</NavLink>
+            <div>
+              <p>{ciudadSeleccionada}</p>
+              <p>{Math.round(weatherData.list[0].main.temp)}°C</p>
             </div>
-            <div className='cajaTextoLateral'>
-              <p>Temperatura: {Math.round(weatherData.list[0].main.temp)}°C</p>
-              <p>Sensación térmica: {Math.round(weatherData.list[0].main.feels_like)}°C</p>
-              <p>Temperatura mínima: {Math.round(weatherData.list[0].main.temp_min)}°C</p>
-              <p>Temperatura máxima: {Math.round(weatherData.list[0].main.temp_max)}°C</p>
-              <p>Pres Atmosférica: {weatherData.list[0].main.pressure} hPa</p>
-              <p>Humedad: {weatherData.list[0].main.humidity}%</p>
-              <p>Clima: {weatherData.list[0].weather[0].main}</p>
-              {/* <p>País: {weatherData.city.country}</p>
-              <p>Ciudad: {weatherData.city.name}</p> */}
+            <div className='imgBox'>
+              <img
+                src={`http://openweathermap.org/img/w/${weatherData.list[0].weather[0].icon}.png`}
+                alt={weatherData.city.name}
+                onError={(e) => console.error("Error al cargar la imagen:", e)}
+              />
             </div>
+            <NavLink className="navLink" to="/PrevisionDelTiempoCincoDiasEnCiudadSeleccionada">Previsión cinco días en Ciudades</NavLink>
+          </div>
+          <div className='cajaTextoLateral'>
+            <p>Temperatura: {Math.round(weatherData.list[0].main.temp)}°C</p>
+            <p>Sensación térmica: {Math.round(weatherData.list[0].main.feels_like)}°C</p>
+            <p>Temperatura mínima: {Math.round(weatherData.list[0].main.temp_min)}°C</p>
+            <p>Temperatura máxima: {Math.round(weatherData.list[0].main.temp_max)}°C</p>
+            <p>Pres Atmosférica: {weatherData.list[0].main.pressure} hPa</p>
+            <p>Humedad: {weatherData.list[0].main.humidity}%</p>
+            <p>Clima: {weatherData.list[0].weather[0].main}</p>
+          </div>
         </div>
-        )}
-      
+      )}
     </>
-  )
-  }
-  
+  );
+};
+
 export default TiempoActualCincoCiudades;
 
 

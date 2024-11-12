@@ -1,11 +1,18 @@
 @media(min-width: 769px) and (max-width: 1500px){
-    h1 {
-        width: 90%;
+    .h1CincoDias {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
         margin: auto;
-        margin-top: 0px;
         font-size:5rem;
         /* border: 1px solid yellow; */
       } 
+      .h1CincoDias h1{
+        margin: auto;
+        /* border: 1px solid red;
+        color: blue; */
+      }  
     .cincoDiasCaja{
         width: 100%;
         display: flex;
@@ -56,7 +63,6 @@
     flex-direction: row;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.30);
-    backdrop-filter: blur(10px); 
     margin-top: 20px;  
     margin-left: 10px;
     /* border: 1px solid blue; */
@@ -72,7 +78,6 @@
     justify-content: space-around;
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.50);
-    backdrop-filter: blur(10px);
     border: 2px solid rgba(0, 0, 0, 0.50);
     /* border: 1px solid red; */
 }
@@ -118,8 +123,6 @@ height: 90%;
     padding: 10px;  
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.50);
-    backdrop-filter: blur(10px);
-    
     &&:hover{
         cursor: pointer;
         background-color: rgba(255, 255, 255, 0.904);
@@ -180,7 +183,6 @@ height: 90%;
         background-color: rgb(136, 132, 132);
         border-radius: 10px;
         background: rgba(255, 255, 255, 0.30);
-        backdrop-filter: blur(10px);
         margin-top: 20px;  
         /* border: 1px solid blue; */
     }
@@ -197,7 +199,6 @@ height: 90%;
         margin-top: 0px;
         border-radius: 5px;
         background: rgba(0, 0, 0, 0.50);
-        backdrop-filter: blur(10px);
         /* border: 1px solid red; */
     }
     .cincoDias .cajaLateral .cajitaDoble{
@@ -218,7 +219,6 @@ height: 90%;
         padding: 5px;  
         border-radius: 5px;
         background: rgba(0, 0, 0, 0.50);
-        backdrop-filter: blur(10px);
         /* border: 1px solid green; */
     }
     .cincoDias .cajaLateral .cajitaDoble .cajitaDobleImg{
@@ -242,7 +242,6 @@ height: 90%;
         padding: 5px;  
         border-radius: 5px;
         background: rgba(0, 0, 0, 0.50);
-        backdrop-filter: blur(10px);
         /* border: 1px solid yellow; */
     }
 }
